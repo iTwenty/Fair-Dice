@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rTi-ZR-ueO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Ynn-Db-CuQ">
+            <objects>
+                <navigationController id="rTi-ZR-ueO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WW2-oh-dBZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Czf-wW-hGY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qj-4c-lhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1380" y="128"/>
+        </scene>
+        <!--Fair Dice-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Fair Dice" id="BYZ-38-t0r" customClass="ViewController" customModule="DeckOfDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1P-d2-Fly">
+                                <rect key="frame" x="0.0" y="64" width="375" height="301.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="48"/>
+                                <state key="normal" title="Roll!"/>
+                                <connections>
+                                    <action selector="didClickRollBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVn-On-ALV"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R76-kb-T5y">
+                                <rect key="frame" x="0.0" y="365.5" width="375" height="301.5"/>
+                                <subviews>
+                                    <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mcb-Th-HPU" userLabel="Dice 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="302"/>
+                                    </pickerView>
+                                    <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juL-8k-JCd" userLabel="Dice 2">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="302"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="juL-8k-JCd" secondAttribute="trailing" id="9Vg-u5-yKc"/>
+                                    <constraint firstItem="juL-8k-JCd" firstAttribute="width" secondItem="Mcb-Th-HPU" secondAttribute="width" id="Hpe-Q8-zsO"/>
+                                    <constraint firstItem="juL-8k-JCd" firstAttribute="top" secondItem="R76-kb-T5y" secondAttribute="top" id="K5P-7j-G7x"/>
+                                    <constraint firstItem="Mcb-Th-HPU" firstAttribute="top" secondItem="R76-kb-T5y" secondAttribute="top" id="MHG-e7-iDj"/>
+                                    <constraint firstItem="Mcb-Th-HPU" firstAttribute="leading" secondItem="R76-kb-T5y" secondAttribute="leading" id="SqQ-yx-bZo"/>
+                                    <constraint firstAttribute="bottom" secondItem="juL-8k-JCd" secondAttribute="bottom" id="Vl4-Ly-bKV"/>
+                                    <constraint firstItem="juL-8k-JCd" firstAttribute="leading" secondItem="Mcb-Th-HPU" secondAttribute="trailing" id="mTh-4O-RNg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mcb-Th-HPU" secondAttribute="bottom" id="xfb-Fl-sWb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v1P-d2-Fly" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1Jh-Db-FzZ"/>
+                            <constraint firstItem="v1P-d2-Fly" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Gd-0b-QpM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R76-kb-T5y" secondAttribute="bottom" id="3VH-rm-DTC"/>
+                            <constraint firstItem="R76-kb-T5y" firstAttribute="height" secondItem="v1P-d2-Fly" secondAttribute="height" id="DtA-Sg-4jY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R76-kb-T5y" secondAttribute="trailing" id="Vhu-Mf-jlY"/>
+                            <constraint firstItem="v1P-d2-Fly" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="caF-dT-ThI"/>
+                            <constraint firstItem="R76-kb-T5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lW6-Uo-Kjz"/>
+                            <constraint firstItem="R76-kb-T5y" firstAttribute="top" secondItem="v1P-d2-Fly" secondAttribute="bottom" id="na0-Xn-jpW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Fair Dice" id="uhE-iO-5sU">
+                        <barButtonItem key="rightBarButtonItem" title="⚙" style="plain" id="V8L-4t-NXD">
+                            <connections>
+                                <segue destination="leI-zx-pf0" kind="show" id="ECv-uH-INd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dice1View" destination="Mcb-Th-HPU" id="hU7-O9-gMP"/>
+                        <outlet property="dice2View" destination="juL-8k-JCd" id="XFC-8a-CgD"/>
+                        <outlet property="rollBtn" destination="v1P-d2-Fly" id="UDV-ZI-6K4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-316" y="126.38680659670166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nc6-Nr-5f9">
+            <objects>
+                <viewController id="leI-zx-pf0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Soi-I2-zxF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WpM-Ss-lHU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYf-N1-WvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608" y="123"/>
         </scene>
     </scenes>
 </document>

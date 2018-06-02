@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0334C320C25D7E002E55BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0334C220C25D7E002E55BC /* SettingsViewController.swift */; };
+		7F0334C620C25E8D002E55BC /* DiceRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0334C520C25E8D002E55BC /* DiceRoll.swift */; };
+		7F0334C820C25F25002E55BC /* BasicDiceRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0334C720C25F25002E55BC /* BasicDiceRoll.swift */; };
+		7F0334CA20C25FD6002E55BC /* FairDiceRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0334C920C25FD6002E55BC /* FairDiceRoll.swift */; };
 		7F18BC8420C16F2E00F35AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18BC8320C16F2E00F35AC0 /* AppDelegate.swift */; };
 		7F18BC8620C16F2E00F35AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18BC8520C16F2E00F35AC0 /* ViewController.swift */; };
 		7F18BC8920C16F2E00F35AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F18BC8720C16F2E00F35AC0 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F0334C220C25D7E002E55BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7F0334C520C25E8D002E55BC /* DiceRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRoll.swift; sourceTree = "<group>"; };
+		7F0334C720C25F25002E55BC /* BasicDiceRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDiceRoll.swift; sourceTree = "<group>"; };
+		7F0334C920C25FD6002E55BC /* FairDiceRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairDiceRoll.swift; sourceTree = "<group>"; };
 		7F18BC8020C16F2E00F35AC0 /* DeckOfDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckOfDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F18BC8320C16F2E00F35AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F18BC8520C16F2E00F35AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F0334C420C25E3F002E55BC /* diceroll */ = {
+			isa = PBXGroup;
+			children = (
+				7F0334C520C25E8D002E55BC /* DiceRoll.swift */,
+				7F0334C720C25F25002E55BC /* BasicDiceRoll.swift */,
+				7F0334C920C25FD6002E55BC /* FairDiceRoll.swift */,
+			);
+			path = diceroll;
+			sourceTree = "<group>";
+		};
 		7F18BC7720C16F2E00F35AC0 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +72,10 @@
 		7F18BC8220C16F2E00F35AC0 /* DeckOfDice */ = {
 			isa = PBXGroup;
 			children = (
+				7F0334C420C25E3F002E55BC /* diceroll */,
 				7F18BC8320C16F2E00F35AC0 /* AppDelegate.swift */,
 				7F18BC8520C16F2E00F35AC0 /* ViewController.swift */,
+				7F0334C220C25D7E002E55BC /* SettingsViewController.swift */,
 				7F18BC8720C16F2E00F35AC0 /* Main.storyboard */,
 				7F18BC8A20C16F3000F35AC0 /* Assets.xcassets */,
 				7F18BC8C20C16F3000F35AC0 /* LaunchScreen.storyboard */,
@@ -135,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0334C820C25F25002E55BC /* BasicDiceRoll.swift in Sources */,
+				7F0334CA20C25FD6002E55BC /* FairDiceRoll.swift in Sources */,
 				7F18BC8620C16F2E00F35AC0 /* ViewController.swift in Sources */,
 				7F18BC8420C16F2E00F35AC0 /* AppDelegate.swift in Sources */,
+				7F0334C320C25D7E002E55BC /* SettingsViewController.swift in Sources */,
+				7F0334C620C25E8D002E55BC /* DiceRoll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,13 +305,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75WN78RS4G;
+				DEVELOPMENT_TEAM = LAH32MJT38;
 				INFOPLIST_FILE = DeckOfDice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.helpshift.demo.vibhishan.DeckOfDice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.itwenty.fairdice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,13 +324,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 75WN78RS4G;
+				DEVELOPMENT_TEAM = LAH32MJT38;
 				INFOPLIST_FILE = DeckOfDice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.helpshift.demo.vibhishan.DeckOfDice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.itwenty.fairdice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
